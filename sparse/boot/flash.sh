@@ -163,6 +163,7 @@ fi
 
 IMAGES=(
 "boot ${SAILFISH_IMAGE_PATH}hybris-boot.img"
+"FOTAKernel ${SAILFISH_IMAGE_PATH}hybris-recovery.img"
 )
 
 if [ "$UNAME" = "Darwin" ]; then

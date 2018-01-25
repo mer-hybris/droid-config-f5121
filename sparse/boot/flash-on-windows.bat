@@ -158,6 +158,7 @@ exit /b 1
 @echo on
 
 @call :fastboot flash boot hybris-boot.img
+@call :fastboot flash FOTAKernel hybris-recovery.img
 @call :fastboot flash system fimage.img001
 @call :fastboot flash userdata sailfish.img001
 @call :fastboot flash oem %blobfilename%
