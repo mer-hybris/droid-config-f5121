@@ -37,6 +37,12 @@ whiteBalanceValues=[0, 3, 2, 6, 5]
 focusDistanceValues=[4, 16]
 flashValues=[2, 32]
 exposureCompensationValues=[4, 2, 0, -2, -4]
+videoResolution_1080p='1920x1080'
+videoResolution_720p='1280x720'
+videoResolution_360p='640x360'
+viewfinderResolution_1080p='1920x1080'
+viewfinderResolution_720p='1280x720'
+viewfinderResolution_360p='640x360'
 focusDistance=16
 
 [apps/jolla-camera/secondary/video]
@@ -48,4 +54,10 @@ whiteBalanceValues=[0, 3, 2, 6, 5]
 focusDistanceValues=[4, 16]
 flashValues=[2]
 exposureCompensationValues=[4, 2, 0, -2, -4]
+videoResolution_1080p='1920x1080'
+videoResolution_720p='1280x720'
+videoResolution_360p='640x360'
+viewfinderResolution_1080p='1920x1080'
+viewfinderResolution_720p='1280x720'
+viewfinderResolution_360p='640x360'
 focusDistance=16
