@@ -103,6 +103,10 @@ SERIALNUMBERS=
 count=0
 for SERIALNO in $FASTBOOT_DEVICES; do
   PRODUCT=$($FASTBOOTCMD_NO_DEVICE -s $SERIALNO getvar product 2>&1 | head -n1 | cut -d ' ' -f2)
+  BASEBAND=$($FASTBOOTCMD_NO_DEVICE -s $SERIALNO getvar version-baseband 2>&1 | head -n1 | cut -d ' ' -f2)
+  BOOTLOADER=$($FASTBOOTCMD_NO_DEVICE -s $SERIALNO getvar version-bootloader 2>&1 | head -n1 | cut -d ' ' -f2)
+
+  echo "Found $PRODUCT, baseband:$BASEBAND, bootloader:$BOOTLOADER"
 
   if [ ! -z "$(echo $PRODUCT | grep -e "F512[12]")" ]; then
     SERIALNUMBERS="$SERIALNO $SERIALNUMBERS"
@@ -128,10 +132,6 @@ if [ "$($FASTBOOTCMD getvar secure 2>&1 | head -n1 | cut -d ' ' -f2 )" == "yes" 
   echo "Please go to https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/ and see instructions how to unlock your device."
   echo;
   exit 1;
-fi
-
-if [ -z ${BINARY_PATH} ]; then
-  BINARY_PATH=./
 fi
 
 if [ -z ${SAILFISH_IMAGE_PATH} ]; then
@@ -177,7 +177,7 @@ for IMAGE in "${IMAGES[@]}"; do
 done
 
 if [ -z ${BLOB_BIN_PATH} ]; then
-  BLOB_BIN_PATH=./
+  BLOB_BIN_PATH=.
 fi
 
 BLOBS=""
@@ -206,7 +206,7 @@ for IMAGE in "${IMAGES[@]}"; do
   $FLASHCMD $partition $ifile
 done
 
-echo "Flashing oem partition.."
+echo "Flashing $BLOBS to oem partition.."
 $FASTBOOTCMD boot $OEM_FLASHER
 # wait to make sure host and device are ready.
 sleep 3
