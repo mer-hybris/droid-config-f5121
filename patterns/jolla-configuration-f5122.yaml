@@ -25,8 +25,12 @@ Requires:
 - csd
 - geoclue-provider-mlsdb
 - jolla-settings-system-flashlight
-- jolla-settings-system-nfc
 - mapplauncherd-booster-silica-qt5-media
+
+# NFC
+- nfcd-mce-plugin
+- nfcd-dbuslog-plugin
+- jolla-settings-system-nfc
 
 Summary: Jolla Configuration f5122
 

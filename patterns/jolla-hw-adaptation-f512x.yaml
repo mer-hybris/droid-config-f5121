@@ -17,7 +17,6 @@ Requires:
 - bluetooth-rfkill-event-hciattach
 
 # NFC
-- nfcd-mce-plugin
 - nfcd-pn54x-plugin
 
 # Sensors
