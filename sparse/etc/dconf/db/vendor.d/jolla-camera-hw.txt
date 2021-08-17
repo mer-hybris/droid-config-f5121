@@ -1,3 +1,6 @@
+[apps/jolla-camera]
+maxVideoResolution='1920x1080'
+
 [apps/jolla-camera/primary/image]
 imageResolution='5984x3392'
 videoResolution='1920x1080'
