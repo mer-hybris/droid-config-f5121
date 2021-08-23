@@ -16,7 +16,7 @@ Requires: bluetooth-rfkill-event-hciattach
 Requires: nfcd-pn54x-plugin
 
 # Sensors
-Requires: hybris-libsensorfw-qt5
+Requires: hybris-libsensorfw-qt5-hal
 
 # Vibra
 Requires: ngfd-plugin-native-vibrator
@@ -56,7 +56,7 @@ Requires: sailfish-devicelock-fpd
 Requires: sailfish-device-encryption
 
 # For devices where test_gps eventually gets a fix:
-Requires: geoclue-provider-hybris
+Requires: geoclue-provider-hybris-hal
 
 %description -n patterns-sailfish-device-adaptation-f512x
 Pattern with packages for f512x HW Adaptation
