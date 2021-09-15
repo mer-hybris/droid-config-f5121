@@ -58,6 +58,9 @@ Requires: sailfish-device-encryption
 # For devices where test_gps eventually gets a fix:
 Requires: geoclue-provider-hybris-hal
 
+# Telephony (RIL sockets)
+Requires: ofono-ril-plugin
+
 %description -n patterns-sailfish-device-adaptation-f512x
 Pattern with packages for f512x HW Adaptation
 
