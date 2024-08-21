@@ -51,6 +51,8 @@ Requires: rfkill
 
 # enable device lock and allow to select untrusted software
 Requires: sailfish-devicelock-fpd
+Requires: sailfish-fpd-slave-f5121
+Obsoletes: sailfish-fpd-slave-binder
 
 # Enable home encryption
 Requires: sailfish-device-encryption
